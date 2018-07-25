@@ -20,10 +20,15 @@ env:
 matrix:
   - LINT_CHECK="1"
 
+
 install:
-  - git clone --depth=1 https://github.com/Elico-Corp/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
+  - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 
-virtualenv:
-  system_site_packages: true
+script:
+  - travis_run_tests
+
+after_success:
+  - travis_after_tests_success
+
