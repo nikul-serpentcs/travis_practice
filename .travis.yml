@@ -1,4 +1,6 @@
 language: python
+sudo: false
+cache: pip
 python:
   - 2.7
 
@@ -6,6 +8,14 @@ addons:
   apt:
     packages:
       - expect-dev
+      - python-lxml
+      - python-simplejson
+      - python-serial
+      - python-yaml
+
+install: pip install --user -r requirements.txt
+
+script: pytest
 
 matrix:
   - LINT_CHECK="1"
