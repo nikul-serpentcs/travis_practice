@@ -1,3 +1,0 @@
-a="test"
-
-print "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", a
