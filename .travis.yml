@@ -2,12 +2,7 @@ language: python
 python:
   - 2.6
   - 2.7
-
-install:
-  - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
-  - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
-  - travis_install_nightly
-
+  
   matrix:
   - LINT_CHECK="1"
   - TRANSIFEX="1"
