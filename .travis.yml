@@ -31,7 +31,7 @@ install:
   - travis_install_nightly
 
 ignore_changes:
-  - *.md
+  - *.js
 
 script:
   - travis_run_tests
