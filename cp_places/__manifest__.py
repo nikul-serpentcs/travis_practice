@@ -11,7 +11,7 @@
     'website': 'www.serpentcs.com',
     'depends': [
         'website_community_portal',
-        'web_google_maps'
+        # 'web_google_maps'
     ],
     'data': [
         'views/actions.xml',
