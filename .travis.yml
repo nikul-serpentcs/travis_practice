@@ -30,9 +30,6 @@ install:
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 
-ignore:
-  - *.js
-
 script:
   - travis_run_tests
 
