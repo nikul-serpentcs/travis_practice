@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+<!--<act_window id="act_places" name="Map"-->
+                <!--res_model="places.place"-->
+                <!--view_type="map"-->
+                <!--view_mode="map"-->
+                <!--view_id="places_place_view_map"-->
+                <!--context="{'map_view_ref_id':'places_place_view_map'}"/>-->
+</odoo>

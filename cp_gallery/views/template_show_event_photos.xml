@@ -1,0 +1,61 @@
+<odoo>
+
+    <template id="template_show_event_photos" name="Photo Gallery">
+        <t t-call="website.layout">
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <meta name="viewport" content="width=device-width"/>
+            <script type="text/javascript"
+                    src="/cp_gallery/static/src/js/image_show.js"/>
+            <t t-set="v" t-value="0"/>
+            <div class="grid_partner_bg">
+            <div class="container">
+                <form name="frm_gallery">
+                    <h1>
+                    </h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-primary">
+
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <t t-esc="name"/>
+                                        Photos
+                                    </h3>
+                                </div>
+                                <div id="slider">
+                                    <t t-foreach="gallery_photos.photo_ids"
+                                       t-as="gal_pics">
+                                        <div class="col-md-3 table-responsive"
+                                             style="{height: 200px; width: 250px;}">
+                                            <img width="250px" id="myImg"
+                                                 height="200px"
+                                                 alt="event image"
+                                                 t-attf-src="data:image/gif;base64, #{gal_pics.images}"
+                                                 class="images"
+                                                 style="padding-bottom: 20px"/>
+                                        </div>
+                                    </t>
+                                </div>
+                                <div id="myModal" class="modal">
+                                    <span class="close">
+                                        Close
+                                    </span>
+                                    <!-- Modal Content (The Image) -->
+
+                                    <img class="modal-content" id="img01"/>
+
+                                    <!-- Modal Caption (Image Text) -->
+                                    <div id="caption">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

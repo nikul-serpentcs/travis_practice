@@ -1,0 +1,42 @@
+<odoo>
+    <template id="template_list_events" name="Committee chart assets">
+        <t t-call="website.layout">
+            <div class="grid_partner_bg">
+                <br/><br/>
+            <div class="container">
+                <form name="frm_gallery">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                <center><h2 class="panel-title">Select Event</h2></center>
+                                </div>
+                                <table class="table table-stripped"
+                                       id="gallery-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Event Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="gallery_data"
+                                           t-as="gal_data">
+                                            <tr>
+                                                <td>
+                                                    <a t-attf-href="/page/show_photos?id={{gal_data.event_id.name}}">
+                                                        <span t-field="gal_data.event_id"/>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><br/><br/></div>
+        </t>
+    </template>
+</odoo>
