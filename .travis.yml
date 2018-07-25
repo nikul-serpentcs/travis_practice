@@ -6,8 +6,6 @@ addons:
   apt:
     packages:
       - expect-dev
-script:
-  - travis_run_tests
 
 matrix:
   - LINT_CHECK="1"
