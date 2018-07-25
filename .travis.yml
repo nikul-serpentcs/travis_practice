@@ -10,9 +10,6 @@ addons:
     packages:
       - expect-dev
       - python-lxml
-      - python-simplejson
-      - python-serial
-      - python-yaml
 
 env:
   global:
