@@ -13,10 +13,11 @@ addons:
       - python-serial
       - python-yaml
 
-install: pip install --user -r requirements.txt
+env:
+  global:
+  - VERSION="10.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
 
 script: pytest
 
 matrix:
   - LINT_CHECK="1"
-  - TRANSIFEX="1"
