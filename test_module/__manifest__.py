@@ -12,16 +12,6 @@
     'depends': [
         'base',
     ],
-#    'data': [
-#        'security/portal_security.xml',
-#        'security/ir.model.access.csv',
-#        'data/sequence.xml',
-#        'views/menu_details.xml',
-#        'views/res_partner_view.xml',
-#        'views/job_assign_view.xml',
-#        'views/template_committee_chart.xml',
-#        'views/template_committee_grid.xml'
-#    ],
     'installable': True,
     'application': True,
 }
