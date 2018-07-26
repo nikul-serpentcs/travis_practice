@@ -14,6 +14,5 @@ class ResPartner(models.Model):
 
     @api.multi
     def write(self, vals):
-        res = super(ResPartner, self).write(vals)
-        res.update({'committee_position': self.committee_position})
-        return res
+        vals.update({'committee_position': self.committee_position})
+        return super(ResPartner, self).write(vals)
